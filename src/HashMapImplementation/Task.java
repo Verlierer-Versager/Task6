@@ -6,9 +6,6 @@ import java.util.Collections;
 
 public class Task {
 
-    public void a() {
-
-    }
 
     public ArrayList<Occurrence> solution(String text) {
         ArrayList<Occurrence> list = new ArrayList<>();
@@ -28,11 +25,7 @@ public class Task {
         int size = map.size();
         System.out.println(size);
         for (Occurrence element : list) {
-            //element.setOccurrence((double) map.get(element.getChars()) / size);
-            //int o = map.get(element.getChars());
-            String str = element.getChars();
-            int a = map.get(str);
-            element.setOccurrence((double) a/map.size);
+            element.setOccurrence((double) map.get(element.getChars()) / size);
         }
         Collections.sort(list);
         return list;
